@@ -39,4 +39,8 @@ contract TESTNFT is ERC721URIStorage {
         _safeMint(msg.sender, _tokenId);
         _setTokenURI(_tokenId, getTokenURL(_tokenId));
     }
+
+    function getCurrentTokenId() public view returns (uint256) {
+        return _tokenId;
+    }
 }
